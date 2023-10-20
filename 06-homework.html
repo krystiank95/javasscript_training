@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework</title>
+</head>
+<body>
+    <button onclick="
+        let number = Math.random();
+        console.log(number);
+
+        let result;
+
+        if(number < 0.5){
+            result = 'heads';
+        } else {
+            result = 'tails';
+        };
+        console.log(result);
+
+        let guess = 'heads'
+
+        if(result === guess){
+            alert('you won')
+        } else {
+            alert('you lose')
+        };
+        ">heads
+    </button>
+    <button onclick="
+        let number = Math.random();
+        console.log(number);
+
+        let result;
+
+        if(number < 0.5){
+            result = 'heads';
+        } else {
+            result = 'tails';
+        };
+        console.log(result);
+
+        let guess = 'tails'
+        
+        if(result === guess){
+            alert('you won')
+        } else {
+            alert('you lose')
+        };"
+        >tails
+    </button>
+    <script>
+
+        // display message in console depend of hour value, display name at the end of the message
+        let  hour = 4;
+        const name = 'Krystian';
+
+        if(hour >= 6 && hour <= 12) {
+            console.log('good morning', name);
+        } else if(hour >= 13 && hour <= 17){
+            console.log('good afternoon', name);
+        } else {
+            console.log('good night', name);
+        }
+
+        //display message in console depend of age and if it is not a weekend
+
+        let age =  2;
+        const isHoliday = false;
+
+        if(isHoliday === false && (age <= 6 || age >= 65)){
+            console.log('discount')
+        } else {
+            console.log('you have to pay full price')
+        };
+
+        /* heads and tails game
+        let number = Math.random();
+        console.log(number);
+        let result;
+
+        let guess = 'heads';
+
+        if(number < 0.5){
+            result = 'heads';
+        } else {
+            result = 'tails';
+        };
+
+        if(result === guess){
+            alert('you won')
+        } else {
+            alert('you lose')
+        };*/
+
+    </script>
+</body>
+</html>
