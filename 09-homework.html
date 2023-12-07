@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-homework</title>
+</head>
+<body>
+    <!--create butto and display it in console-->
+    <button class="button-a">9a</button>
+
+    <!--create button and change the text inside after click-->
+    <button onclick="buttonClick()" class="button-b">9b</button>
+    <br>
+    <br>
+
+    <!--create two button and display message underneath what button was clicked-->
+    <button onclick="
+    document.querySelector('.js-choice').innerHTML = 'you choose heads'
+    " class="js-heads">heads</button>
+    <button onclick="document.querySelector('.js-choice').innerHTML = 'you choose tails'" class="js-tails">tails</button>
+
+    <p class="js-choice"></p>
+    
+
+    <!--create a textbox and submit button. while click on button display text below-->
+
+    <input placeholder="Name" class="input"  onkeydown="btnOpt(event)"> 
+    <button onclick="clickDisplay()" class="btn-value">submit</button>
+    <p class="js-display-name"></p>
+
+
+    <script>
+        
+        console.log(document.querySelector('.button-a'));
+
+        function buttonClick(){
+            if(document.querySelector('.button-b').innerHTML === '9b')
+            {document.querySelector('.button-b').innerHTML = '9b done!'}
+            else{document.querySelector('.button-b').innerHTML = '9b'}
+        }
+        function btnOpt(event){
+        if(event.key === ''){clickDisplay()}
+        }
+
+        function clickDisplay(){
+            const btnValue= document.querySelector('.input')
+           let name =  btnValue.value
+
+            document.querySelector('.js-display-name').innerHTML = `hello ${name}`
+        }
+        
+        
+    </script>
+</body>
+</html>

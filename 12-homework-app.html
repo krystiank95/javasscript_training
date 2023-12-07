@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <button onclick="
+        message++" class="js-add">Add</button>
+    <button onclick="message--" class="js-remove">Remove</button>
+    <script>
+        /* change title every one sec*/
+        
+/*
+        setInterval(function(){
+   if(document.title === 'App'){
+    document.title = '(2)App'}
+    else {
+        document.title = 'App'
+    }
+}, 1000);*/
+
+/*create 2 buttons add and remove that incrase/decrase number in title*/
+   /* let message = 0;
+
+    setInterval(function(){
+        if (document.title === 'App'){
+            document.title = `(${message}) new messages`;
+        } else {document.title = 'App'}
+    },1000)
+
+        if(message === 0){
+            document.title = 'App';
+            
+        }
+*/
+/*if message === 0 stop changing the title*/
+
+let message = 0;
+
+setInterval(function(){
+    if(message > 0){
+        document.title = `(${message}) new messages`
+    } else {document.title = 'App';
+    }
+}, 1000);
+
+console.log(message)
+    </script>
+</body>
+</html>

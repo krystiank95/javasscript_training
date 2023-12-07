@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework</title>
+</head>
+<body>
+    <script>
+        //creating product with properties name and price and use bracket notation in 3rd
+        const product = {
+            name: 'basketball',
+            price: 2095,
+            'delivery-time': '3 days'
+        }
+        console.log(product)
+        // incrase the price of product
+        console.log(product.price + 200)
+
+        //create function compared proce and return the less expensive prod
+
+        const product2 = {
+            name: 'tenis ball',
+            price: 50
+        }
+
+        function comparePrice(){
+            if(product.price < product2.price){
+                console.log(product)
+            } else {console.log(product2)}
+        }
+        comparePrice();
+
+        // create function who say true if product hame same values inside
+        function isSameProduct(){
+            if(product.name === product2.name &&
+            product.price === product2.price){
+                return true
+            } else {return false}
+        }
+
+        isSameProduct()
+
+        //make text in lowercase
+        console.log("TEST".toLowerCase());
+
+        //make text in upercase
+        console.log("test".toUpperCase());
+
+        //repeat result
+        console.log('test repeat'.repeat(100));
+
+    </script>
+    
+</body>
+</html>

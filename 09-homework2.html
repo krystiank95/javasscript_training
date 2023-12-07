@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of order" class="js-cost-input"
+     onkeydown="handleCostKeyDown(event);"
+    >
+    <button onclick="calculateTotal()">Calculate</button>
+    <p class="js-total-cost"></p>
+
+    <!--create a textbox and submit button.  display text below live-->
+    <input placeholder="Name" class="input"  onkeyup="btnOpt(event)"> 
+    <button onclick="clickDisplay()" class="btn-value">submit</button>
+    <p class="js-display-name"></p>
+
+    <script>
+         function handleCostKeyDown(event){
+            if (event.key === 'Enter'){
+                calculateTotal();
+            }
+        }  
+
+        // to calculate total js can't correctly round a number thats why we have to chane value from $ to cents and then convert it again to $    
+        function calculateTotal(){
+           const inputElement = document.querySelector('.js-cost-input');
+           let cost = Number(inputElement.value);
+           
+           if(cost < 40){
+            cost = ((cost*100) + 1000)/100;
+           }
+      
+
+           document.querySelector('.js-total-cost')
+           .innerHTML = `$${cost}`;
+        }
+
+        function btnOpt(event){
+        if(event.key !== null){clickDisplay()}
+        }
+
+        function clickDisplay(){
+            const btnValue= document.querySelector('.input')
+           let name =  btnValue.value
+
+            document.querySelector('.js-display-name').innerHTML = `hello ${name}`
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-homework</title>
+    <link rel="stylesheet" href="css/10homework.css" />
+</head>
+<body>
+   
+
+    <!--create 3 button with any styling you want-->
+    <button class="amazon-btn"> add to Cart</button>
+    <button class="uber-btn"> Request now</button>
+    <button class="uber-btn2">Schedule for later</button>
+
+     <!--create button and check if element have a class-->
+     <button class="js-button">test</button>
+
+     <!--create button and change it after click-->
+     <button onclick="clickBtn('.js-btn')" class="gaming-btn js-btn">Gaming</button>
+
+      <!--create 3 button and change it after click (only one button can be marked)-->
+      <button onclick="clickBtn('.js-btn2')" class="gaming-btn js-btn2">Music</button>
+      <button onclick="clickBtn('.js-btn3')" class="gaming-btn js-btn3">Tech</button>
+
+     <script src="scripts/10homework.js">
+       console.log(document.querySelector('.js-button').classList.contains('js-button')) 
+   </script>
+</body>
+</html>
